@@ -61,7 +61,7 @@ nav {
     top: 0;
     width: 100%;
     height: 100vh;
-    background-color: #0d0d0d;
+    background-color: rgb(10, 10, 10);
     z-index: 900;
     padding: 15vh 5% 10vh;
     transform: translateY(-60%);
@@ -136,6 +136,8 @@ nav {
 /* header */
 .header-section {
     position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -158,23 +160,40 @@ nav {
     /* filter: grayscale(100%); */
 }
 
-.header-vid::before {
-    content: "";
+.bg-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(10, 10, 10);
+    z-index: 2;
+    opacity: 0.5; 
+    transition: opacity 0.3s ease;
+}
+
+
+.hero-text-container {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+    padding-top: 20vh;
+}
+
+.hero-text {
+    position: relative;
+    height: 80vh;
+    width: 100%;
 }
 
 .header-text-section {
-    position: absolute;
-    top: 20vh;
+    position: relative;
+    flex-direction: column;
     width: 100%;
-    height: 80vh;
     display: flex;
+    z-index: 100;
+
 }
 
 
@@ -188,13 +207,14 @@ nav {
     text-align: right;
     text-transform: uppercase;
     mix-blend-mode: difference;
-    z-index: 10;
+    z-index: 100;
 }
 
 .header-text-container p {
     font-weight: 500;
     height: 130px;
     color: #e7e7e7;
+    mix-blend-mode: difference;
 }
 
 .cta-btn {
@@ -214,13 +234,14 @@ nav {
     color: #e7e7e7;
     display: flex;
     flex-direction: column;
-    z-index: 10;
+    z-index: 100;
 }
 
 .header-bottom h1 {
     font-size: 8rem;
     line-height: 1;
-    font-weight: 800;
+    font-family: 'Satoshi Bold';
+    width: 100%;
 }
 
 .bottom-text {
@@ -238,14 +259,13 @@ nav {
 }
 
 .number-section {
-    padding: 0 5%;
+    padding: 30vh 5% 20vh;
     width: 100%;
 }
 
 .numbers-container {
     position: relative;
     padding: 0 5%;
-    top: 120vh;
     display: flex;
     flex-direction: column;
     padding: 10px;
@@ -264,18 +284,20 @@ nav {
     width: 60%;
     padding: 40px;
     height: 190px;
-    background-color: #e7e7e770;
+    background-color: #e7e7e79d;
+
 }
 
 .box2 {
     width: 40%;
     padding: 40px;
     height: 190px;
-    background-color: #e7e7e770;
+    background-color: #e7e7e79d;
 }
 
 .box1 p, .box2 p {
     height: 26px;
+    font-size: 18px;
     border-bottom: 1px solid #0d0d0d;
 }
 
@@ -287,6 +309,54 @@ nav {
 .box1 h2 span, .box2 h2 span {
     color: #af0000;
 }
+
+
+
+
+
+.header-about-section {
+    display: flex;
+    flex-direction: column;
+    color: #e7e7e7;
+    padding: 5vh 5% 10vh;
+}
+
+.header-about-heading {
+    font-size: 5rem;
+    width: 500px;
+    font-family: 'Satoshi Bold';
+    line-height: 1;
+}
+
+.header-about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.header-about-text p {
+    width: 520px;
+    text-align: right;
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.header-about-text p span {
+    color: #af0000;
+}
+
+
+.sect {
+    height: 100vh;
+    width: 100%;
+    background-color: lawngreen;
+    z-index: 200;
+    position: relative;
+    margin-top: 200vh;
+}
+
+
 
 
 
